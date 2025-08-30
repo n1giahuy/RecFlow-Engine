@@ -56,23 +56,7 @@ cd RecFlow-Engine
 
 ### 2. Prepare the Data & Artifacts
 
-The API requires **pre-computed artifacts** (the enriched dataset and FAISS index).
-Download the processed data directory from:
-👉 [Download Artifacts (ZIP)](./artifacts)
-
-Extract to the following structure:
-
-```
-<project_root>/
-└── data/
-    └── processed/
-        ├── processed_books_enriched.parquet
-        └── faiss_index/
-            ├── index.faiss
-            └── index.pkl
-```
-
-*(Optional: To generate artifacts from scratch, see the Offline Pipeline docs.)*
+The API requires **pre-computed artifacts** (the enriched dataset and FAISS index), which are located in the [`artifacts/`](./artifacts) directory of this repo.
 
 ### 3. Launch the System
 
