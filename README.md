@@ -127,11 +127,9 @@ docker run -d -p 8000:8000 \
 
 * **Unit Tests**: Run with `pytest`
 * **CI Pipeline**: GitHub Actions runs linting & tests on every push
-* **Load Tests**: Included `locustfile.py` for performance benchmarking
-
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the [MIT License](./LICENSE).
 
