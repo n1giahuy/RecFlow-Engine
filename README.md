@@ -58,7 +58,7 @@ cd RecFlow-Engine
 
 The API requires **pre-computed artifacts** (the enriched dataset and FAISS index).
 Download the processed data directory from:
-👉 [Download Artifacts (ZIP)](./artifacts.zip)
+👉 [Download Artifacts (ZIP)](./artifacts)
 
 Extract to the following structure:
 
