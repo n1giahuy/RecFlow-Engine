@@ -1,0 +1,30 @@
+# Core API Framework 
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# ML & Data Processing
+pandas
+pyarrow
+scikit-learn
+sentence-transformers
+faiss-cpu
+tqdm
+langchain
+langchain-community
+langchain_huggingface
+torch
+transformers
+
+# Monitoring
+prometheus-fastapi-instrumentator
+prometheus-client
+
+# Testing
+pytest-mock
+pytest
+httpx
+ruff
+requests
+

@@ -1,0 +1,63 @@
+version: '3.8'
+
+services: 
+  api:
+    build: .
+    image: recflow_engine:local  
+    container_name: recflow_api
+    env_file:
+      - .env
+    ports: 
+      - "8000:8000"
+    volumes:
+      - ./artifacts:/usr/src/app/artifacts
+    
+    mem_limit: 4g
+    restart: unless-stopped
+  
+  prometheus:
+    image: prom/prometheus:v2.45.0
+    container_name: prometheus
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    ports:
+      - "9090:9090"
+    restart: unless-stopped  
+  
+  grafana:
+    image: grafana/grafana:9.5.3
+    container_name: grafana 
+    ports:
+      - "3000:3000"
+    volumes: 
+      - grafana-storage:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_DATASOURCES_DEFAULT_NAME=Prometheus
+      - GF_DATASOURCES_DEFAULT_URL=http://prometheus:9090
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+    
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.47.2
+    container_name: cadvisor
+    ports:
+      - "8081:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk:/dev/disk:ro
+    privileged: true 
+    devices: 
+      - /dev/kmsg
+    restart: unless-stopped
+
+volumes:
+  grafana-storage: {}
+      
+        

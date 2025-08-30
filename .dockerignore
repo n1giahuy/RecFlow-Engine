@@ -1,0 +1,28 @@
+.dockerignore
+Dockerfile 
+docker-compose.yml 
+.git/
+.github/
+.gitignore
+__pycache__/
+*.pyc 
+*.pyo 
+*.pyd 
+.env 
+
+
+prometheus/
+build_index.py 
+data/ 
+
+# Python virtual environments
+.venv/
+env/
+venv/
+
+# Testing
+.pytest_cache/
+tests/
+pytest.ini
+
+README.md
