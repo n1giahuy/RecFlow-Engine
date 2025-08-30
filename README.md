@@ -29,16 +29,13 @@ LiteraRecs is built on the **"Offline Enrichment, Online Serving"** philosophy t
 
 ## 🛠️ Tech Stack
 
-| Component        | Technology |
-|------------------|------------|
-| Backend API      | FastAPI, Uvicorn |
-| Data Processing  | Pandas, PyArrow |
-| Semantic Search  | Sentence-Transformers, FAISS |
-| NLP Enrichment   | Hugging Face Transformers (BART for Zero-Shot, DistilBERT for Sentiment) |
-| Containerization | Docker, Docker Compose |
-| CI/CD            | GitHub Actions |
-| Observability    | Prometheus, Grafana, cAdvisor |
-| Testing          | Pytest, Locust |
+| Category                  | Technology / Library                                                                |
+| ------------------------- | ----------------------------------------------------------------------------------- |
+| **MLOps & Infrastructure**| `Docker`, `Docker Compose`, `GitHub Actions`, `Prometheus`, `Grafana`, `cAdvisor`     |
+| **Backend & API**         | `FastAPI`, `Uvicorn`, `Pydantic`, `prometheus-fastapi-instrumentator`               |
+| **NLP & Vector Search**   | `Hugging Face Transformers`, `Sentence-Transformers`, `FAISS`, `LangChain`, `PyTorch` |
+| **Data Processing**       | `Pandas`, `PyArrow`                                                                 |
+| **Testing & Linting**     | `Pytest`, `pytest-mock`, `Ruff`, `httpx`                                            
 
 ---
 
@@ -54,14 +51,14 @@ You can run the entire system—including the API and monitoring stack—with ju
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/n1giahuy/RecFlow-Engine.git
-cd <YOUR_REPO_NAME>
+cd RecFlow-Engine
 ````
 
 ### 2. Prepare the Data & Artifacts
 
 The API requires **pre-computed artifacts** (the enriched dataset and FAISS index).
-Download the pre-packaged `data/processed` directory from:
-👉 *(Provide link to zipped artifacts: Google Drive/Dropbox/Git LFS)*
+Download the processed data directory from:
+👉 [Download Artifacts (ZIP)](./artifacts.zip)
 
 Extract to the following structure:
 
@@ -115,11 +112,11 @@ LiteraRecs provides full observability out-of-the-box.
 
 **Prometheus Targets:**
 Prometheus scrapes metrics from API and cAdvisor.
-![Prometheus Targets](./images/prometheus.png)
+![Prometheus Targets](./images/Prometheus.png)
 
 **Grafana Dashboard:**
 Visualize KPIs: memory, CPU, RPS, error rates, latency.
-![Grafana Dashboard](./images/grafana.png)
+![Grafana Dashboard](./images/Grafana.png)
 
 ---
 
