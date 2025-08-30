@@ -6,7 +6,7 @@ A comprehensive, end-to-end book recommendation system designed with a productio
 
 ---
 
-## 🌟 Core Features
+## Core Features
 - **Semantic Search**: Understands the meaning behind a user's query, not just keywords. Find books based on plot, themes, or writing style.  
 - **Intelligent Filtering**: Dynamically filter recommendations by `predicted_category` (e.g., *Fantasy*) and `sentiment` (e.g., *POSITIVE*), which are generated automatically by NLP models.  
 - **Production-Ready API**: A high-performance, asynchronous API built with FastAPI, fully documented with Swagger UI.  
@@ -15,7 +15,7 @@ A comprehensive, end-to-end book recommendation system designed with a productio
 
 ---
 
-## 🏛️ System Architecture
+## System Architecture
 
 LiteraRecs is built on the **"Offline Enrichment, Online Serving"** philosophy to ensure low-latency responses for the end-user.
 
@@ -27,7 +27,7 @@ LiteraRecs is built on the **"Offline Enrichment, Online Serving"** philosophy t
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category                  | Technology / Library                                                                |
 | ------------------------- | ----------------------------------------------------------------------------------- |
@@ -39,7 +39,7 @@ LiteraRecs is built on the **"Offline Enrichment, Online Serving"** philosophy t
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 You can run the entire system—including the API and monitoring stack—with just a few commands.
 
@@ -78,7 +78,7 @@ This will:
 
 ---
 
-## 🕹️ API Usage Example
+## API Usage Example
 
 Interact via Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs)
 
@@ -90,7 +90,7 @@ Interact via Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs
 
 ---
 
-## 📊 Monitoring & Observability
+## Monitoring & Observability
 
 LiteraRecs provides full observability out-of-the-box.
 
@@ -104,7 +104,7 @@ Visualize KPIs: memory, CPU, RPS, error rates, latency.
 
 ---
 
-## 🐳 Pre-built Docker Image
+## Pre-built Docker Image
 
 You can pull the pre-built API image directly from Docker Hub:
 
@@ -123,7 +123,7 @@ docker run -d -p 8000:8000 \
 
 ---
 
-## 🧪 Testing
+## Testing
 
 * **Unit Tests**: Run with `pytest`
 * **CI Pipeline**: GitHub Actions runs linting & tests on every push
