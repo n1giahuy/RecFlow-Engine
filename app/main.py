@@ -32,3 +32,9 @@ app.include_router(api_router, prefix="/api/v1")
 @app.get("/", tags=["Root"])
 def read_root():
     return {"message": "Welcome to RecFlow Engine API."}
+
+@app.get("/error", tags=["Test"])
+def make_error():
+    result = 1 / 0
+    return {"result": result}
+
