@@ -17,7 +17,7 @@ A comprehensive, end-to-end book recommendation system designed with a productio
 
 ## System Architecture
 
-LiteraRecs is built on the **"Offline Enrichment, Online Serving"** philosophy to ensure low-latency responses for the end-user.
+RecFlow Engine is built on the **"Offline Enrichment, Online Serving"** philosophy to ensure low-latency responses for the end-user.
 
 - **Offline Pipeline**: Performs heavy NLP enrichment (zero-shot classification, sentiment analysis), generates embeddings with Sentence-Transformers, and builds a FAISS vector index.  
 - **Online API**: Serves recommendation requests in real-time by leveraging the pre-computed artifacts.  
@@ -92,7 +92,7 @@ Interact via Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs
 
 ## Monitoring & Observability
 
-LiteraRecs provides full observability out-of-the-box.
+RecFlow Engine provides full observability out-of-the-box.
 
 **Prometheus Targets:**
 Prometheus scrapes metrics from API and cAdvisor.
@@ -117,7 +117,7 @@ Run it with local artifacts mounted:
 ```bash
 docker run -d -p 8000:8000 \
   -v ./data/processed:/app/data/processed:ro \
-  --name litera-recs-api \
+  --name recflow_api \
   n1giahuy/recflow-engine:latest
 ```
 
